@@ -1,0 +1,3 @@
+<br />
+<a href="{SITE_URL}/{HREF}" target="_blank">{CAPTION}</a>{?FATHER} - <a href="{SITE_URL}/{F_HREF}">{FATHER}</a>{FATHER?} ({DATE})<br />
+{SHOT}<br />

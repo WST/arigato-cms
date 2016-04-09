@@ -1,0 +1,41 @@
+{_TITLE_=Письмо администратору сайта}
+{_ID_=send}
+{_BODY_=<form action="send.php" method="post" name="sendmail" onsubmit="return send_validate();">
+<input type="hidden" name="sid" value="{SID}" />
+<table cellpadding="5" cellspacing="0" class="lcfrm" align="center">
+<tr><td>
+	<table border="0" style="color:black;">
+	<tr>
+		<td>
+			<font color="#BF5000">*</font> Ваш e-mail:
+		</td>
+		<td>
+			<input type="text" size="48" maxlength="40" name="email" value="{AUTHOREMAIL}" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<font color="#BF5000">*</font> Тема письма:
+		</td>
+		<td>
+			<input type="text" size="48" maxlength="128" name="subj" value="{SUBJ}" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<font color="#BF5000">*</font> Контрольные цифры:
+		</td>
+		<td>
+{#{PATH}/patterns/num.html}
+		</td>
+	</tr>
+	</table>
+	&nbsp;<font color="#BF5000">*</font> Содержание письма:<br />
+	<center>
+	<textarea name="body" rows="24" cols="80"></textarea><br /><br />
+	<input type="submit" name="post" value="Отправить" /><br />
+	</center>
+</td></tr>
+</table>
+</form>}
+{#{PATH}/patterns/block.html}

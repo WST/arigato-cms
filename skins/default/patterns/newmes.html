@@ -1,0 +1,9 @@
+<table width="100%" border="0"><tr>
+<td align="left"><font color="#BF5000"><b>{TITLE}</b></font></td>
+<td align="right">
+<i><font size="1">{DATE}</font></i>&nbsp;
+{?ADMIN}<a href="admin.php?action=news&amp;id={ID}"><img src="{PATH}/images/edit.gif" border="0" alt="Править" title="Править новость" /></a>
+<a href="admin.php?action=new_del&amp;id={ID}" onclick='return confirm("Удалить новость?");'><img src="{PATH}/images/delete.gif" border="0" alt="Удалить" title="Удалить новость" /></a>{ADMIN?}
+</td></tr></table>
+{MESSAGE}
+<br /><br />

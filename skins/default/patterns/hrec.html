@@ -1,0 +1,14 @@
+{?NEWS}
+<table width="100%"><tr><td align="left">
+{?NEW}<img src="{PATH}/images/new.gif" border="0" alt="Новое" title="Новый раздел" />{NEW?} <a href="{HREF}">{?CAPTION}{CAPTION}{CAPTION?}{!CAPTION}{TITLE}{CAPTION!}</a>{?FATHER} - <a href="{F_HREF}">{FATHER}</a>{FATHER?} <font size="1">(просмотров: <font color="#BF5000">{COUNT}</font>{!COMMENT=0}, комментариев: <font color="#BF5000">{COMMENT}</font>{COMMENT!})</font>
+</td><td align="right">
+<i><font size="1">{DATE}</font></i>
+</td></tr></table>
+{NEWS?}
+{!NEWS}
+<br />
+<a href="{HREF}">{?CAPTION}{CAPTION}{CAPTION?}{!CAPTION}{TITLE}{CAPTION!}</a><br />
+{NEWS!}
+{?CONTENT}
+{CONTENT}
+<br />{CONTENT?}{?NEWS}<br />{NEWS?}

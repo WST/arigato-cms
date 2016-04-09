@@ -1,0 +1,18 @@
+{_TITLE_=Опрос}
+{_ID_=poolblock{POOL_ID}}
+{_BODY_=<center><font color="#BF5000"><b>
+{QUEST}
+</b></font></center>
+<form method="post" action="pool.php" onsubmit="return checkPool(this);">
+{?VOTED}<table border="0" width="100%" class="pool">{VOTED?}{!VOTED}<span style="font-weight:bold;font-size:8pt;">{VOTED!}
+{ANSWERS}
+{!VOTED}</span>{VOTED!}{?VOTED}</table>{VOTED?}
+{!VOTED}<br /><center><input type="submit" value="Голосовать" /></center>{VOTED!}
+</form>
+<font size="1">
+Всего голосов: <font color="#BF5000"><b>{CNT}</b></font><br />
+{?ADMIN}Начало: <font color="#BF5000"><b>{BDATE}</b></font><br />
+Конец: <font color="#BF5000"><b>{?EDATE}{EDATE}{EDATE?}{!EDATE}бессрочное{EDATE!}</b></font><br />{ADMIN?}
+</font>}
+{#{PATH}/patterns/block.html}
+<br />

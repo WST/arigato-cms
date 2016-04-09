@@ -1,0 +1,32 @@
+{_TITLE_=Чат}
+{_ID_=chatblock}
+{_BODY_=<form action="chat.php" method="get" name="refform" target="chat">
+<center>
+<input type="hidden" name="autoref" value="1" />
+<font size="1">Обновлять:</font>
+<input type="submit" value="Да" onclick="document.refform.autoref.value='1';" />
+<input type="submit" value="Нет" onclick="document.refform.autoref.value='0';" />
+</center>
+</form>
+<table width="100%" border="0">
+<tr><td style="border:1pt solid #BF5000;">
+<iframe name="chat" src="chat.php" height="256" width="100%" frameborder="0"></iframe>
+</td></tr>
+</table>
+{?ADMIN}
+<center><a href="chat.php?action=clear" onclick='return confirm("Очистить сообщения чата?");'>Очистить чат</a></center>
+{BAN=}
+{ADMIN?}
+{!BAN}
+<form action="chat.php" method="post" name="chatform" target="chat" onsubmit="return chat_validate();">
+<center>
+<input type="hidden" name="post" value="ok" />
+<font size="1">Имя:</font> <input type="text" size="18" maxlength="16" name="your_name" value="{AUTHORNAME}" />
+<font size="1">Сообщение:</font><br />
+<input type="text" size="28" name="your_message" /><br /><br />
+<input type="submit" value="Отправить" />
+</center>
+</form>
+{BAN!}}
+{#{PATH}/patterns/block.html}
+<br />

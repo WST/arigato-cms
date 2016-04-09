@@ -1,0 +1,66 @@
+body
+{
+	background-color:#EDFFEA;
+}
+
+input,textarea,button
+{
+	color:black;
+	font:normal 12px Verdana,Arial,Helvetica,sans-serif;
+	border:1px solid;
+	border-color:#BF5000;
+	background-color:white;
+}
+
+input.radio
+{
+	color:black;
+	font:normal 12px Verdana,Arial,Helvetica,sans-serif;
+	border:0px;
+	border-color:none;
+	background-color:#EDFFEA;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	color:#BF5000;
+}
+
+a
+{
+	font-weight:bold;
+	text-decoration:none;
+	color:blue;
+}
+
+a:hover
+{
+	color:#FFB040;
+}
+
+img
+{
+	border:0px;
+}
+
+table
+{
+	border-color:#BF5000;
+	border-collapse:collapse;
+	padding:2px;
+	margin:2px;
+}
+
+table th
+{
+	border-color:#BF5000;
+	padding:2px;
+	margin:2px;
+}
+
+table td
+{
+	border-color:#BF5000;
+	padding:2px;
+	margin:2px;
+}

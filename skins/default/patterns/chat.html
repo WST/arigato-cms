@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Expires" content="{EXPIRES}">
+{?REFRESH}{!REFRESH=0}<meta http-equiv="refresh" content="{REFRESH}">{REFRESH!}{REFRESH?}
+<title>Чат</title>
+<link href="{PATH}/patterns/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript"><!--
+function add_nick(nick)
+{(}	m=top.document.chatform.your_message;
+	m.value='[i]'+nick+':[/i] '+m.value;
+	m.focus();
+{)}
+//--></script>
+</head>
+<body class="chat">
+{MESSAGES}
+</body></html>

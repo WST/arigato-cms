@@ -1,0 +1,31 @@
+{?ADMIN}
+{_TITLE_=Добавить фотографию}
+{_ID_=addphoto}
+{_CLOSED_=1}
+{_BODY_=<form action="addphoto.php" method="post" name="add_photo" onsubmit="return photo_validate();">
+<input type="hidden" name="index" value="{INDEX}" />
+<center>
+<table>
+<tr>
+<td>Фотография:</td>
+<td><input type="text" size="40" maxlength="255" name="pictur" /><br /><center><font size="1">(путь, относительно папки images)</font></center></td>
+</tr><tr>
+<td>Название:</td>
+<td><input type="text" size="40" maxlength="255" name="title" /></td>
+</tr><tr>
+<td>Описание:</td>
+<td><input type="text" size="40" maxlength="255" name="caption" /></td>
+</tr><tr>
+<td>Позиция:</td>
+<td><input type="radio" class="radio" name="position" value="0" checked /> начало <input type="radio" class="radio" name="position" value="1" /> конец</td>
+</tr>
+</table>
+<input type="submit" name="post" value="Добавить фотографию" />
+</center>
+</form>}
+{#{PATH}/patterns/block.html}
+<br />
+{ADMIN?}
+<table border="0" width="90%" align="center" cellspacing="4" cellpadding="4"><tr>
+{PHOTOS}
+</tr></table>

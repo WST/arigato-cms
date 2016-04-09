@@ -1,0 +1,16 @@
+<tr>
+<th width="20%">
+<font size="1">{DATE}</font><br />
+<a href="#" onclick="addtag('[b]{AUTHORNAME}[/b]');return false;">{AUTHORNAME}</a>
+<br />
+{?AUTHOREMAIL}<a href="mailto:{AUTHOREMAIL}"><img src="{PATH}/images/mail.gif" alt="E-Mail" title="{AUTHOREMAIL}" /></a>{AUTHOREMAIL?}
+{?ICQ}&nbsp;<a href="http://wwp.icq.com/scripts/search.dll?to={ICQ}" target="_blank"><img src="http://web.icq.com/whitepages/online?icq={ICQ}&img=5" alt="ICQ" title="{ICQ}" /></a>{ICQ?}
+{?URL}&nbsp;<a href="{URL}" target="_blank"><img src="{PATH}/images/home.gif" alt="URL" title="{URL}" /></a>{URL?}
+<br />
+{?ADMIN}
+<a href="admin.php?action=delete&amp;id={ID}" onclick='return confirm("Удалить сообщение?");'><img src="{PATH}/images/delete.gif" alt="Удалить" title="Удалить сообщение" /></a>
+<a href="admin.php?action=comment&amp;id={ID}"><img src="{PATH}/images/edit.gif" border="0" alt="Править" title="Править сообщение" /></a>
+<font size="1">IP: {IP}</font>{ADMIN?}
+</th><td width="80%">
+{MESSAGE}
+</td></tr> 

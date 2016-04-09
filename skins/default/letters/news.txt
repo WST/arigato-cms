@@ -1,0 +1,10 @@
+Новости сайта {SITE}
+Здравствуйте!<br />
+{?BODY}<br />
+<b>Обновления на сайте {SITE}:</b><br />
+{BODY}{BODY?}
+{?NEWS}<br />
+{?BODY}<hr /><br />{BODY?}
+<b>Новости сайта {SITE}:</b><br />
+{NEWS}{NEWS?}
+<br />

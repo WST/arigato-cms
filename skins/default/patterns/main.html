@@ -1,0 +1,81 @@
+<script type="text/javascript" src="{PATH}/patterns/main.js"></script>
+<table width="100%" class="m">
+<tr><th style="width:{WIDTH};" align="left" valign="top">
+<table></table>
+{_TITLE_=Меню}
+{_ID_=menu}
+{_BODY_={MENU}}
+{#{PATH}/patterns/block.html}
+
+<br />
+
+{?LINKS}
+{_TITLE_=Ссылки}
+{_ID_=links}
+{_BODY_={LINKS}}
+{#{PATH}/patterns/block.html}
+<br />
+{LINKS?}
+
+{?ADMIN}
+{_TITLE_=Администрирование}
+{_ID_=admin}
+{_BODY_=<a href="admin.php" class="l" target="_blank">&nbsp;Админка</a>
+{?K_ART}<a href="admin.php?action=content&amp;cmd=edit&amp;art={K_ART}" class="l" target="_blank">&nbsp;Править раздел</a>{K_ART?}
+<a href="admin.php?action=logout" class="l">&nbsp;Выход</a>}
+{#{PATH}/patterns/block.html}
+<br />
+{ADMIN?}
+
+{LASTNEW}
+
+{CHAT}
+
+{SEARCH}
+
+{?POOL}
+{POOL}
+{POOL?}
+
+{DISPATCH}
+
+{?BANNER}
+{_TITLE_=Баннерка}
+{_ID_=banner}
+{_BODY_=<center>{BANNER}</center>}
+{#{PATH}/patterns/block.html}
+<br />
+{BANNER?}
+
+{STATISTIC}
+
+</th><td>
+
+<table border="0" width="99%" align="center"><tr><td>
+{?ART_PATH}{ART_PATH}<br />{ART_PATH?}
+<h3 align="center">{?ICON}<img src="images/{ICON}" style="vertical-align: middle;" /> {ICON?}{CAPTION}</h3>
+{?AUTHOR}
+<div align="right">
+<i>Автор: {AUTHOR}</i>
+</div><br />
+{AUTHOR?}
+{ART}
+{?ART}{_BR_=<br />}{ART?}
+{?PREV}<center><a href="{PREV_HREF}"><img src="{PATH}/images/back.gif" border="0" alt="Назад" title="{PREV_TITLE}" /></a>{!NEXT}</center>{NEXT!}{_BR_=<br />}{PREV?}{?NEXT}{!PREV}<center>{PREV!} <a href="{NEXT_HREF}"><img src="{PATH}/images/next.gif" border="0" alt="Далее" title="{NEXT_TITLE}" /></a></center>{_BR_=<br />}{NEXT?}
+{?ADMIN}{?COMMENT}<br />{?ART}<br />{ART?}
+<center><b>Заметки администратора</b></center><br />
+{COMMENT}{_BR_=<br />}
+{COMMENT?}{ADMIN?}
+{_BR_}
+{PHOTOS}
+{FAQ}
+{HISTORY}
+{NEWS}
+{?ANSWER}
+{?ART}<br /><center><b>Ваши мнения</b></center><br />{ART?}
+{ANSWER}
+{ANSWER?}
+</td></tr></table>
+
+</td></tr>
+</table>

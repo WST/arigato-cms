@@ -1,0 +1,13 @@
+<a name="{ID}"></a>
+<table width="100%" border="0"><tr>
+<td align="left"><font color="#BF5000"><b>{TITLE}</b></font></td>
+{?ADMIN}
+<td align="right">
+<a href="admin.php?action=up&amp;id={ID}"><img src="{PATH}/images/up.gif" border="0" alt="Поднять" title="Поднять" /></a>
+<a href="admin.php?action=down&amp;id={ID}"><img src="{PATH}/images/down.gif" border="0" alt="Опустить" title="Опустить" /></a>
+<a href="admin.php?action=news&amp;id={ID}"><img src="{PATH}/images/edit.gif" border="0" alt="Править" title="Править" /></a>
+<a href="admin.php?action=new_del&amp;id={ID}" onclick='return confirm("Удалить?");'><img src="{PATH}/images/delete.gif" border="0" alt="Удалить" title="Удалить" /></a>
+</td>{ADMIN?}
+</tr></table>
+{MESSAGE}
+<br /><br />

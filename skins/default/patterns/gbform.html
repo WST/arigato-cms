@@ -1,0 +1,72 @@
+{_TITLE_=Добавить комментарий}
+{_ID_=gbform}
+{_CLOSED_=1}
+{_BODY_=<form action="preview.php" method="post" name="preview" target="new_win">
+<input type="hidden" name="your_message" />
+</form>
+<form action="post.php" method="post" name="add_rec" onsubmit="return validate();">
+<input type="hidden" name="index" value="{INDEX}" />
+<center>
+<table class="m">
+<tr><td>
+&nbsp;
+<table border="0">
+<tr>
+<td align="right"><font color="#BF5000">*</font>Ваше имя: </td>
+<td>
+<input type="text" size="30" maxlength="16" name="your_name" value="{AUTHORNAME}" />
+</tr><tr>
+<td align="right">e-mail: </td>
+<td>
+<input type="text" size="30" maxlength="40" name="your_email" value="{AUTHOREMAIL}" />
+</tr><tr>
+<td align="right">Ваш сайт: </td>
+<td>
+<input type="text" size="30" maxlength="60" name="your_url" value="{URL}" />
+</tr><tr>
+<td align="right">ICQ: </td>
+<td>
+<input type="text" size="30" maxlength="16" name="your_icq" value="{ICQ}" /></td>
+</tr><tr>
+<td align="right"><font color="#BF5000">*</font>Контрольные цифры: </td>
+<td>
+{#{PATH}/patterns/num.html}
+</tr><tr>
+<td>
+<font color="#BF5000">*</font>Сообщение:</td>
+<td>
+<input type="button" value="Ж" style="font-weight:bold;width:30px" title="Жирный" onclick="addtag('[b][/b]');" />
+<input type="button" value=" К" style="font-style:italic;width:30px" title="Курсив" onclick="addtag('[i][/i]');" />
+<input type="button" value="Ч" style="text-decoration:underline;width:30px" title="Подчеркнутый" onclick="addtag('[u][/u]');" />
+</td></tr></table>
+</td><td>
+&nbsp;
+<table style="text-align:center;"><tr height="24">
+<td width="40px"><img src="{PATH}/images/1.gif" alt="Улыбка" onClick="addtag(' :) ');" style="cursor:hand;" /></td>
+<td width="40px"><img src="{PATH}/images/2.gif" alt="Намёк" onClick="addtag(' ;) ');" style="cursor:hand;" /></td>
+<td width="40px"><img src="{PATH}/images/3.gif" alt="Смех" onClick="addtag(' :D ');" style="cursor:hand;" /></td>
+<td width="40px"><img src="{PATH}/images/4.gif" alt="Язвит" onClick="addtag(' ;D ');" style="cursor:hand;" /></td>
+</tr><tr height="24">
+<td><img src="{PATH}/images/5.gif" alt="Злость" onClick="addtag(' ^:( ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/6.gif" alt="Грусть" onClick="addtag(' :( ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/7.gif" alt="Удивление" onClick="addtag(' :o ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/8.gif" alt="Знаток" onClick="addtag(' 8) ');" style="cursor:hand;" /></td>
+</tr><tr height="24">
+<td><img src="{PATH}/images/9.gif" alt="Непонятки" onClick="addtag(' ??? ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/10.gif" alt="Уважает" onClick="addtag(' :-) ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/11.gif" alt="Дразнит" onClick="addtag(' :P ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/12.gif" alt="Смущённый" onClick="addtag(' :-[ ');" style="cursor:hand;" /></td>
+</tr><tr height="24">
+<td><img src="{PATH}/images/13.gif" alt="Протест" onClick="addtag(' :-X ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/14.gif" alt="Нерешительность" onClick="addtag(' :-/ ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/15.gif" alt="Поцелуй" onClick="addtag(' :-* ');" style="cursor:hand;" /></td>
+<td><img src="{PATH}/images/16.gif" alt="Плач" onClick="addtag(' :*( ');" style="cursor:hand;" /></td>
+</tr></table>
+</td></tr></table>
+<textarea name="your_message" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onchange="storeCaret(this);" rows="6" cols="80"></textarea>
+<br /><font color="#BF5000">*</font> - обязательные поля.<br /><br />
+<input type="submit" name="post" value="Добавить сообщение" /> <input type="button" value="Предпросмотр" onclick="onpreview(document.add_rec.your_message.value);" />
+</center>
+</form>}
+{#{PATH}/patterns/block.html}
+<br />

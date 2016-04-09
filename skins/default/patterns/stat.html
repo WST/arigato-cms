@@ -1,0 +1,12 @@
+{_TITLE_=Статистика}
+{_ID_=stat}
+{_BODY_=<center><font color="#BF5000" size="1"><b>{TIME}</b></font></center>
+<table width="100%" class="stat">
+<tr><td>Сайт в сети:</td><td>{SITE_AGE} дней</td></tr>
+<tr><td>Просмотров:</td><td>{STAT_CNT}</td></tr>
+<tr><td>Уникальных:</td><td>{STAT_UNI}</td></tr>
+<tr><td>Рекорд:</td><td>{STAT_MAX}{?ADMIN}<br />{MAX_TIME}{ADMIN?}</td></tr>
+<tr><td>На сайте:</td><td>{?STAT_ONL=1}Вы одни{STAT_ONL?}{!STAT_ONL=1}{STAT_ONL}{STAT_ONL!}</td></tr>
+</table>}
+{#{PATH}/patterns/block.html}
+<br />

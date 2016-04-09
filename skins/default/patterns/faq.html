@@ -1,0 +1,42 @@
+{?ADMIN}
+{_TITLE_=Добавить вопрос}
+{_ID_=addfaq}
+{_CLOSED_=1}
+{_BODY_=<br /><form action="addnew.php" method="post" name="add_new" onsubmit="return new_validate();">
+<input type="hidden" name="index" value="{INDEX}" />
+<input type="hidden" name="faq" value="1" />
+<center>
+Вопрос: <input type="text" size="67" name="title" /><br />
+Ответ:
+&nbsp;<input type="button" value="Ж" style="font-weight:bold;width:30px" title="Жирный" onclick="new_addtag('[b][/b]');" />
+&nbsp;<input type="button" value=" К" style="font-style:italic;width:30px" title="Курсив" onclick="new_addtag('[i][/i]');" />
+&nbsp;<input type="button" value="Ч" style="text-decoration:underline;width:30px" title="Подчеркнутый" onclick="new_addtag('[u][/u]');" />
+<br />
+<textarea name="message" onclick="new_storeCaret(this);" onkeyup="new_storeCaret(this);" onchange="new_storeCaret(this);" rows="6" cols="80"></textarea>
+<br />
+Смайлики:&nbsp;
+<img src="{PATH}/images/1.gif" alt="Улыбка" onClick="new_addtag(' :) ');" style="cursor: hand;" />
+<img src="{PATH}/images/2.gif" alt="Намёк" onClick="new_addtag(' ;) ');" style="cursor: hand;" />
+<img src="{PATH}/images/3.gif" alt="Смех" onClick="new_addtag(' :D ');" style="cursor: hand;" />
+<img src="{PATH}/images/4.gif" alt="Язвит" onClick="new_addtag(' ;D ');" style="cursor: hand;" />
+<img src="{PATH}/images/5.gif" alt="Злость" onClick="new_addtag(' ^:( ');" style="cursor: hand;" />
+<img src="{PATH}/images/6.gif" alt="Грусть" onClick="new_addtag(' :( ');" style="cursor: hand;" />
+<img src="{PATH}/images/7.gif" alt="Удивление" onClick="new_addtag(' :o ');" style="cursor: hand;" />
+<img src="{PATH}/images/8.gif" alt="Знаток" onClick="new_addtag(' 8) ');" style="cursor: hand;" />
+<img src="{PATH}/images/9.gif" alt="Непонятки" onClick="new_addtag(' ??? ');" style="cursor: hand;" />
+<img src="{PATH}/images/10.gif" alt="Уважает" onClick="new_addtag(' :-) ');" style="cursor: hand;" />
+<img src="{PATH}/images/11.gif" alt="Дразнит" onClick="new_addtag(' :P ');" style="cursor: hand;" />
+<img src="{PATH}/images/12.gif" alt="Смущённый" onClick="new_addtag(' :-[ ');" style="cursor: hand;" />
+<img src="{PATH}/images/13.gif" alt="Протест" onClick="new_addtag(' :-X ');" style="cursor: hand;" />
+<img src="{PATH}/images/14.gif" alt="Нерешительность" onClick="new_addtag(' :-/ ');" style="cursor: hand;" />
+<img src="{PATH}/images/15.gif" alt="Поцелуй" onClick="new_addtag(' :-* ');" style="cursor: hand;" />
+<img src="{PATH}/images/16.gif" alt="Плач" onClick="new_addtag(' :*( ');" style="cursor: hand;" />
+<br /><input type="submit" name="post" value="Добавить вопрос" />
+</center>
+</form>}
+{#{PATH}/patterns/block.html}
+<br />
+{ADMIN?}
+{LINKS}
+<br /><br />
+{MESSAGES}

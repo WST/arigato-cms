@@ -1,0 +1,11 @@
+<table width="100%" class="block">
+<tr><td>
+<span class="title"><a href="#" onclick="show_hide_block('{_ID_}');return false;" class="title">{_TITLE_}</a></span>
+<div id="{_ID_}" style="display:block;">
+{_BODY_}
+</div>
+</td></tr>
+</table>
+<script type="text/javascript"><!--
+if (getCookie("{_ID_}")=="0"{?_CLOSED_=1}||getCookie("{_ID_}")==""{_CLOSED_?}) document.getElementById("{_ID_}").style.display="none";
+//--></script>{_CLOSED_=}

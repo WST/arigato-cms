@@ -1,0 +1,12 @@
+<td align="center">{?ID}<a href="images/{IMAGE}" target="_blank">
+<img src="sketch.php?photo={ID}" class="photo" width="{SWIDTH}" height="{SHEIGHT}" alt="{TITLE}" title="{CAPTION}" /><br />
+<font size="1">{TITLE}<br />{!SIZE=none}{WIDTH}x{HEIGHT} ({SIZE}){SIZE!}{?SIZE=none}битая{SIZE?}</font></a>
+{?ADMIN}<br />
+<a href="admin.php?action=p_up&amp;id={ID}"><img src="{PATH}/images/up.gif" border="0" alt="Влево" title="Влево" /></a>
+<a href="admin.php?action=p_down&amp;id={ID}"><img src="{PATH}/images/down.gif" border="0" alt="Вправо" title="Вправо" /></a>
+<a href="admin.php?action=photo&amp;id={ID}"><img src="{PATH}/images/edit.gif" border="0" alt="Изменить" title="Изменить" /></a>
+<a href="admin.php?action=photo_del&amp;id={ID}" onclick='return confirm("Удалить фотографию?");'><img src="{PATH}/images/delete.gif" border="0" alt="Удалить" title="Удалить фотографию" /></a>
+{ADMIN?}
+{ID?}</td>
+{?NEWLINE}</tr><tr>
+{NEWLINE?}
